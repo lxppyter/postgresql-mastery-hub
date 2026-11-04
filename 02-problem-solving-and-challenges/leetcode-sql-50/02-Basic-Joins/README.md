@@ -1,4 +1,4 @@
----
+--
 
 ## Module 2: Basic Joins
 
@@ -18,7 +18,7 @@ This module explores fundamental JOIN operations through practical scenarios, fo
 - **Engineering Insight:** A LEFT JOIN preserves every row from the left relation, even when no corresponding record exists on the right. Unmatched right-side attributes are represented as NULL.
 - **Key Consideration:** Choosing INNER JOIN instead would eliminate employees without a matching unique identifier.
 
----
+--
 
 ### 2. #1068 — Product Sales Analysis I
 
@@ -28,7 +28,7 @@ This module explores fundamental JOIN operations through practical scenarios, fo
 - **Engineering Insight:** Transactional records can be enriched with reference data through shared relational keys. INNER JOIN returns only records satisfying the specified matching condition.
 - **Key Consideration:** The join condition defines which product records can contribute to the resulting dataset.
 
----
+--
 
 ### 3. #1581 — Customer Who Visited but Did Not Make Any Transactions
 
@@ -38,7 +38,7 @@ This module explores fundamental JOIN operations through practical scenarios, fo
 - **Engineering Insight:** LEFT JOIN combined with an IS NULL condition identifies records without corresponding matches. This pattern is useful for detecting missing activity and unmatched relationships.
 - **Key Consideration:** NOT EXISTS provides another way to express anti-join logic.
 
----
+--
 
 ### 4. #197 — Rising Temperature
 
@@ -48,7 +48,7 @@ This module explores fundamental JOIN operations through practical scenarios, fo
 - **Engineering Insight:** A relation can be joined against itself to compare records across different points in time. Matching observations by calendar date allows consecutive-day comparisons without requiring a separate historical relation.
 - **Key Consideration:** Consecutive dates and consecutive rows are not necessarily the same thing.
 
----
+--
 
 ### 5. #1661 — Average Time of Process per Machine
 
@@ -58,7 +58,7 @@ This module explores fundamental JOIN operations through practical scenarios, fo
 - **Engineering Insight:** Start and end events can be stored as separate records within the same relation. A self-join pairs events using machine and process identifiers, enabling duration calculations and subsequent aggregation.
 - **Key Consideration:** Correct event pairing is essential. Matching unrelated start and end events would produce incorrect durations.
 
----
+--
 
 ### 6. #577 — Employee Bonus
 
@@ -68,7 +68,7 @@ This module explores fundamental JOIN operations through practical scenarios, fo
 - **Engineering Insight:** When optional information must not eliminate primary records, LEFT JOIN preserves the original employee population while allowing missing bonus information to remain NULL.
 - **Key Consideration:** Filtering right-side attributes in the WHERE clause can change outer-join semantics.
 
----
+--
 
 ### 7. #1280 — Students and Examinations
 
@@ -78,7 +78,7 @@ This module explores fundamental JOIN operations through practical scenarios, fo
 - **Engineering Insight:** CROSS JOIN generates every possible combination of the participating relations. Combining this result with LEFT JOIN allows reports to represent combinations with zero matching examination records.
 - **Key Consideration:** Cartesian product cardinality grows multiplicatively with the sizes of the input relations.
 
----
+--
 
 ### 8. #570 — Managers with at Least 5 Direct Reports
 
@@ -88,7 +88,7 @@ This module explores fundamental JOIN operations through practical scenarios, fo
 - **Engineering Insight:** Hierarchical relationships can be represented within a single relation. Joining employee records against their manager references enables the identification and aggregation of direct reports.
 - **Key Consideration:** Understand the relationship between the employee and manager keys before applying aggregation.
 
----
+--
 
 ### 9. #1934 — Confirmation Rate
 
@@ -98,7 +98,7 @@ This module explores fundamental JOIN operations through practical scenarios, fo
 - **Engineering Insight:** User records and confirmation events are maintained in separate relations. LEFT JOIN preserves users without confirmation activity, while conditional aggregation calculates rates from available event data.
 - **Key Consideration:** NULL handling, zero activity, and division behavior must be considered when calculating ratios.
 
----
+--
 
 ## Module Takeaways
 
