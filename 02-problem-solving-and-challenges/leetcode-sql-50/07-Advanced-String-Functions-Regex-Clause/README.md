@@ -120,6 +120,6 @@ Solutions are presented as code screenshots to maintain a consistent visual form
 - [x] Sorting and Grouping (7/7)
 - [x] Advanced Select and Joins (7/7)
 - [x] Subqueries (7/7)
-- [ ] Advanced String Functions / Regex / Clause (0/7)
+- [x] Advanced String Functions / Regex / Clause (7/7)
 
-**Overall Progress: 43/50 Problems Completed**
+**Overall Progress: 50/50 Problems Completed**
